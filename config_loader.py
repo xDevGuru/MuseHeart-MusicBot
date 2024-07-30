@@ -40,7 +40,7 @@ DEFAULT_CONFIG = {
     "SENSITIVE_INFO_WARN": True,
 
     #########################
-    ### Sistema de música ###
+    ### Music System ###
     #########################
     "AUTO_DOWNLOAD_LAVALINK_SERVERLIST": False,
     "LAVALINK_SERVER_LIST": "https://gist.githubusercontent.com/zRitsu/c3511e1da0440b94c126769dd40c9d91/raw/lavalink.ini",
@@ -69,13 +69,13 @@ DEFAULT_CONFIG = {
     "VOICE_CHANNEL_LATENCY_RECONNECT": 200,
 
     ##############################################
-    ### Sistema de música - Suporte ao spotify ###
+    ### Music System - Spotify support ###
     ##############################################
     "SPOTIFY_CLIENT_ID": '',
     "SPOTIFY_CLIENT_SECRET": '',
 
     ################################################
-    ### Sistema de música - RPC (Rich Presence): ###
+    ### Music System - RPC (Rich Presence): ###
     ################################################
     "RUN_RPC_SERVER": True,
     "RPC_SERVER": "ws://localhost:$PORT/ws",
@@ -85,7 +85,7 @@ DEFAULT_CONFIG = {
     "ENABLE_RPC_AUTH": False,
 
     ##################################################
-    ### Sistema de música - Local lavalink stuffs: ###
+    ### Music System - Local lavalink stuffs: ###
     ##################################################
     "RUN_LOCAL_LAVALINK": False,
     "CONNECT_LOCAL_LAVALINK": True,
@@ -98,7 +98,7 @@ DEFAULT_CONFIG = {
     "SEARCH_PROVIDERS": "scsearch",
 
     ##################################################
-    ### Sistema de música - Integração com Last.fm ###
+    ### Music System - Integration with Last.fm ###
     ##################################################
 
     "LASTFM_KEY": "",
@@ -179,7 +179,7 @@ def load_config():
     except:
         CONFIG["EMBED_COLOR"] = None
 
-    # converter strings que requer número int.
+    # Convert strings that require an int value.
     for i in [
         "MAX_USER_FAVS",
         "IDLE_TIMEOUT",
@@ -208,11 +208,11 @@ def load_config():
         try:
             new_value = int(CONFIG[i])
         except ValueError as e:
-            raise Exception(f"Você usou uma configuração inválida! {i}: {CONFIG[i]}\n{repr(e)}")
+            raise Exception(f"You used an invalid configuration! {i}: {CONFIG[i]}\n{repr(e)}")
 
         CONFIG[i] = new_value
 
-    # converter strings que requer valor bool/nulo.
+    # Convert strings that require a bool/null value.
     for i in [
         "AUTO_SYNC_COMMANDS",
         "INTERACTION_COMMAND_ONLY",
@@ -261,7 +261,7 @@ def load_config():
         try:
             new_value = bools[CONFIG[i]]
         except KeyError as e:
-            raise Exception(f"Você usou uma configuração inválida! {i}: {CONFIG[i]}\n{repr(e)}")
+            raise Exception(f"You used an invalid configuration! {i}: {CONFIG[i]}\n{repr(e)}")
 
         CONFIG[i] = new_value
 
