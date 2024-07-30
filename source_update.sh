@@ -22,7 +22,7 @@ if [ ! -d "venv" ]; then
   fi
 
   if [ ! -d "venv" ]; then
-    echo "Pasta venv não foi criada! Verifique se instalou o python corretamente (e que esteja configurado no PATH/env)"
+    echo "The venv directory was not created! Check if Python is installed correctly (and that it is configured in PATH/env)"
     sleep 45
     exit 1
   fi
