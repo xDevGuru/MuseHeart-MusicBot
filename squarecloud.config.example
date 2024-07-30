@@ -1,17 +1,17 @@
 ######################################################################
-### Aviso: Caso use este arquivo, renomeie para squarecloud.config ###
+### Warning: If you use this file, rename it to squarecloud.config ###
 ######################################################################
 
 ##############################################################################################################
-### Atenção: A RAM você pode alterar de acordo com o plano contratado (ou quantidade desejada).            ###
-### Recomendo que use um plano pago que forneça no mínimo 512MB de RAM + 0.5vcpu e edite o arquivo .env    ###
-### e no campo AUTO_DOWNLOAD_LAVALINK_SERVERLIST mude o valor true para false                              ###
+### Attention: You can change the RAM according to the contracted plan (or desired quantity).              ###
+### I recommend using a paid plan that provides at least 512MB of RAM + 0.5 vCPU and editing the .env file ###
+### and change the value of AUTO_DOWNLOAD_LAVALINK_SERVERLIST from true to false                           ###
 ###                                                                                                        ###
-### Caso queira, você pode alterar o DISPLAY_NAME, DESCRIPTION e link do AVATAR.                           ###
+### If you wish, you can change the DISPLAY_NAME, DESCRIPTION, and AVATAR link.                            ###
 ##############################################################################################################
 
 DISPLAY_NAME=Muse Heart Music Source
-DESCRIPTION=Source de música criada por: xritsu [DC ID: 184889853102653440] source link: https://github.com/zRitsu/MuseHeart-MusicBot
+DESCRIPTION=Music source created by: xritsu [DC ID: 184889853102653440] source link: https://github.com/zRitsu/MuseHeart-MusicBot
 MAIN=main.py
 MEMORY=512
 VERSION=recommended
